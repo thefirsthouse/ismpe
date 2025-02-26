@@ -1,3 +1,8 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Course, Assignment, Submission
+
+models = (Course, Assignment, Submission)
+
+for model in models:
+    admin.site.register(model)
