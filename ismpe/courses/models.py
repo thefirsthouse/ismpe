@@ -6,7 +6,7 @@ class Course(models.Model):
     title = models.CharField("Course title", max_length=255, unique=True)
     description = models.TextField("Description", blank=True)
     students = models.ManyToManyField(CustomUser, related_name="enrolled_courses")
-
+    
     def __str__(self):
         return self.title
 
